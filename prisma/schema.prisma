@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Studio {
+  id        Int      @id @default(autoincrement())
+  name      String
+  films Film[]
+  createdAt DateTime @default(now())
+}
+
+model Film {
+  id Int @id @default(autoincrement()) 
+  title String 
+  duration String
+  tipe String
+  synopsis String?
+  studio Studio @relation(fields: [studioId], references: [id])
+  studioId Int
+  genres Genre[] 
+}
+
+model Genre {
+  id Int @id @default(autoincrement())
+  name String
+  films Film[] 
+}
