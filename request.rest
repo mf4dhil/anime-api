@@ -1,0 +1,20 @@
+### getAllGEnre
+GET http://127.0.0.1:3000/genre
+
+### getOneGEnre
+GET http://127.0.0.1:3000/genre/6
+
+### createGenre
+POST http://127.0.0.1:3000/genre
+Content-Type: application/json
+
+{
+  "name": "Thriller"
+}
+### updateGenre
+PATCH  http://127.0.0.1:3000/genre/6
+Content-Type: application/json
+
+{
+  "name": "Isekai"
+}
