@@ -1,4 +1,5 @@
-import { Prisma, PrismaClient } from '../generated/client/deno/edge.ts';
+// import { PrismaClient, Prisma } from '../generated/client/deno/edge.ts';
+import { PrismaClient, Prisma } from '../generated/client/deno/edge.ts'
 import { load } from 'https://deno.land/std@0.181.0/dotenv/mod.ts';
 
 const envVars = await load();
@@ -13,15 +14,33 @@ const prisma = new PrismaClient({
 
 const studioData: Prisma.StudioCreateInput[] = [
   {
-    name: 'MAPPA',
+    name: 'Mappa',
   },
   {
-    name: 'TOEI ANIMATION',
+    name: 'Toei Animation',
   },
   {
-    name: 'STUDIO PIERROT',
-  },
-];
+    name: 'Studio Pierrot',
+  }
+]
+
+// const genreData: Prisma.GenreCreateInput[] = [
+//   {
+//     name: 'Romance'
+//   },
+//   {
+//     name: 'Action'
+//   },
+//   {
+//     name: 'Comedy'
+//   },
+//   {
+//     name: 'Slince Of Life'
+//   },
+//   {
+//     name: 'Drama'
+//   }
+// ]
 
 for (const u of studioData) {
   const studio = await prisma.studio.create({
