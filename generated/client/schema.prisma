@@ -19,6 +19,7 @@ model Studio {
 model Film {
   id       Int     @id @default(autoincrement())
   title    String
+  img      String
   duration String
   tipe     String
   synopsis String?

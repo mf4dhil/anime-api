@@ -17,7 +17,7 @@ route
   .get('/genre/:id', async (ctx) => {
     // controller get by id
     try {
-      const id = ctx.params.id; 
+      const id: string = ctx.params.id; 
       const data = await prisma.genre.findUnique({
         where: {
           id: Number(id)
@@ -48,7 +48,7 @@ route
   })
   .patch('/genre/:id', async (ctx) => {
     // controller update
-    const id = ctx.params.id
+    const id: string = ctx.params.id
     try {
       const fData = await prisma.genre.findUnique({
         where: {
@@ -73,7 +73,7 @@ route
   })
   .delete('/genre/:id', async (ctx) => {
     try {
-      const id = ctx.params.id
+      const id: string = ctx.params.id
       const data = await prisma.genre.delete({
         where: {
           id: Number(id)

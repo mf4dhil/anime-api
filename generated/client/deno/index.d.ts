@@ -29,6 +29,7 @@ export type Studio = {
 export type Film = {
   id: number
   title: string
+  img: string
   duration: string
   tipe: string
   synopsis: string | null
@@ -1956,6 +1957,7 @@ export namespace Prisma {
   export type FilmMinAggregateOutputType = {
     id: number | null
     title: string | null
+    img: string | null
     duration: string | null
     tipe: string | null
     synopsis: string | null
@@ -1965,6 +1967,7 @@ export namespace Prisma {
   export type FilmMaxAggregateOutputType = {
     id: number | null
     title: string | null
+    img: string | null
     duration: string | null
     tipe: string | null
     synopsis: string | null
@@ -1974,6 +1977,7 @@ export namespace Prisma {
   export type FilmCountAggregateOutputType = {
     id: number
     title: number
+    img: number
     duration: number
     tipe: number
     synopsis: number
@@ -1995,6 +1999,7 @@ export namespace Prisma {
   export type FilmMinAggregateInputType = {
     id?: true
     title?: true
+    img?: true
     duration?: true
     tipe?: true
     synopsis?: true
@@ -2004,6 +2009,7 @@ export namespace Prisma {
   export type FilmMaxAggregateInputType = {
     id?: true
     title?: true
+    img?: true
     duration?: true
     tipe?: true
     synopsis?: true
@@ -2013,6 +2019,7 @@ export namespace Prisma {
   export type FilmCountAggregateInputType = {
     id?: true
     title?: true
+    img?: true
     duration?: true
     tipe?: true
     synopsis?: true
@@ -2110,6 +2117,7 @@ export namespace Prisma {
   export type FilmGroupByOutputType = {
     id: number
     title: string
+    img: string
     duration: string
     tipe: string
     synopsis: string | null
@@ -2138,6 +2146,7 @@ export namespace Prisma {
   export type FilmSelect = {
     id?: boolean
     title?: boolean
+    img?: boolean
     duration?: boolean
     tipe?: boolean
     synopsis?: boolean
@@ -3914,6 +3923,7 @@ export namespace Prisma {
   export const FilmScalarFieldEnum: {
     id: 'id',
     title: 'title',
+    img: 'img',
     duration: 'duration',
     tipe: 'tipe',
     synopsis: 'synopsis',
@@ -4018,6 +4028,7 @@ export namespace Prisma {
     NOT?: Enumerable<FilmWhereInput>
     id?: IntFilter | number
     title?: StringFilter | string
+    img?: StringFilter | string
     duration?: StringFilter | string
     tipe?: StringFilter | string
     synopsis?: StringNullableFilter | string | null
@@ -4029,6 +4040,7 @@ export namespace Prisma {
   export type FilmOrderByWithRelationInput = {
     id?: SortOrder
     title?: SortOrder
+    img?: SortOrder
     duration?: SortOrder
     tipe?: SortOrder
     synopsis?: SortOrder
@@ -4044,6 +4056,7 @@ export namespace Prisma {
   export type FilmOrderByWithAggregationInput = {
     id?: SortOrder
     title?: SortOrder
+    img?: SortOrder
     duration?: SortOrder
     tipe?: SortOrder
     synopsis?: SortOrder
@@ -4061,6 +4074,7 @@ export namespace Prisma {
     NOT?: Enumerable<FilmScalarWhereWithAggregatesInput>
     id?: IntWithAggregatesFilter | number
     title?: StringWithAggregatesFilter | string
+    img?: StringWithAggregatesFilter | string
     duration?: StringWithAggregatesFilter | string
     tipe?: StringWithAggregatesFilter | string
     synopsis?: StringNullableWithAggregatesFilter | string | null
@@ -4149,6 +4163,7 @@ export namespace Prisma {
 
   export type FilmCreateInput = {
     title: string
+    img: string
     duration: string
     tipe: string
     synopsis?: string | null
@@ -4159,6 +4174,7 @@ export namespace Prisma {
   export type FilmUncheckedCreateInput = {
     id?: number
     title: string
+    img: string
     duration: string
     tipe: string
     synopsis?: string | null
@@ -4168,6 +4184,7 @@ export namespace Prisma {
 
   export type FilmUpdateInput = {
     title?: StringFieldUpdateOperationsInput | string
+    img?: StringFieldUpdateOperationsInput | string
     duration?: StringFieldUpdateOperationsInput | string
     tipe?: StringFieldUpdateOperationsInput | string
     synopsis?: NullableStringFieldUpdateOperationsInput | string | null
@@ -4178,6 +4195,7 @@ export namespace Prisma {
   export type FilmUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    img?: StringFieldUpdateOperationsInput | string
     duration?: StringFieldUpdateOperationsInput | string
     tipe?: StringFieldUpdateOperationsInput | string
     synopsis?: NullableStringFieldUpdateOperationsInput | string | null
@@ -4188,6 +4206,7 @@ export namespace Prisma {
   export type FilmCreateManyInput = {
     id?: number
     title: string
+    img: string
     duration: string
     tipe: string
     synopsis?: string | null
@@ -4196,6 +4215,7 @@ export namespace Prisma {
 
   export type FilmUpdateManyMutationInput = {
     title?: StringFieldUpdateOperationsInput | string
+    img?: StringFieldUpdateOperationsInput | string
     duration?: StringFieldUpdateOperationsInput | string
     tipe?: StringFieldUpdateOperationsInput | string
     synopsis?: NullableStringFieldUpdateOperationsInput | string | null
@@ -4204,6 +4224,7 @@ export namespace Prisma {
   export type FilmUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    img?: StringFieldUpdateOperationsInput | string
     duration?: StringFieldUpdateOperationsInput | string
     tipe?: StringFieldUpdateOperationsInput | string
     synopsis?: NullableStringFieldUpdateOperationsInput | string | null
@@ -4400,6 +4421,7 @@ export namespace Prisma {
   export type FilmCountOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
+    img?: SortOrder
     duration?: SortOrder
     tipe?: SortOrder
     synopsis?: SortOrder
@@ -4414,6 +4436,7 @@ export namespace Prisma {
   export type FilmMaxOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
+    img?: SortOrder
     duration?: SortOrder
     tipe?: SortOrder
     synopsis?: SortOrder
@@ -4423,6 +4446,7 @@ export namespace Prisma {
   export type FilmMinOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
+    img?: SortOrder
     duration?: SortOrder
     tipe?: SortOrder
     synopsis?: SortOrder
@@ -4765,6 +4789,7 @@ export namespace Prisma {
 
   export type FilmCreateWithoutStudioInput = {
     title: string
+    img: string
     duration: string
     tipe: string
     synopsis?: string | null
@@ -4774,6 +4799,7 @@ export namespace Prisma {
   export type FilmUncheckedCreateWithoutStudioInput = {
     id?: number
     title: string
+    img: string
     duration: string
     tipe: string
     synopsis?: string | null
@@ -4812,6 +4838,7 @@ export namespace Prisma {
     NOT?: Enumerable<FilmScalarWhereInput>
     id?: IntFilter | number
     title?: StringFilter | string
+    img?: StringFilter | string
     duration?: StringFilter | string
     tipe?: StringFilter | string
     synopsis?: StringNullableFilter | string | null
@@ -4890,6 +4917,7 @@ export namespace Prisma {
 
   export type FilmCreateWithoutGenresInput = {
     title: string
+    img: string
     duration: string
     tipe: string
     synopsis?: string | null
@@ -4899,6 +4927,7 @@ export namespace Prisma {
   export type FilmUncheckedCreateWithoutGenresInput = {
     id?: number
     title: string
+    img: string
     duration: string
     tipe: string
     synopsis?: string | null
@@ -4929,6 +4958,7 @@ export namespace Prisma {
   export type FilmCreateManyStudioInput = {
     id?: number
     title: string
+    img: string
     duration: string
     tipe: string
     synopsis?: string | null
@@ -4936,6 +4966,7 @@ export namespace Prisma {
 
   export type FilmUpdateWithoutStudioInput = {
     title?: StringFieldUpdateOperationsInput | string
+    img?: StringFieldUpdateOperationsInput | string
     duration?: StringFieldUpdateOperationsInput | string
     tipe?: StringFieldUpdateOperationsInput | string
     synopsis?: NullableStringFieldUpdateOperationsInput | string | null
@@ -4945,6 +4976,7 @@ export namespace Prisma {
   export type FilmUncheckedUpdateWithoutStudioInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    img?: StringFieldUpdateOperationsInput | string
     duration?: StringFieldUpdateOperationsInput | string
     tipe?: StringFieldUpdateOperationsInput | string
     synopsis?: NullableStringFieldUpdateOperationsInput | string | null
@@ -4954,6 +4986,7 @@ export namespace Prisma {
   export type FilmUncheckedUpdateManyWithoutFilmsInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    img?: StringFieldUpdateOperationsInput | string
     duration?: StringFieldUpdateOperationsInput | string
     tipe?: StringFieldUpdateOperationsInput | string
     synopsis?: NullableStringFieldUpdateOperationsInput | string | null
@@ -4975,6 +5008,7 @@ export namespace Prisma {
 
   export type FilmUpdateWithoutGenresInput = {
     title?: StringFieldUpdateOperationsInput | string
+    img?: StringFieldUpdateOperationsInput | string
     duration?: StringFieldUpdateOperationsInput | string
     tipe?: StringFieldUpdateOperationsInput | string
     synopsis?: NullableStringFieldUpdateOperationsInput | string | null
@@ -4984,6 +5018,7 @@ export namespace Prisma {
   export type FilmUncheckedUpdateWithoutGenresInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    img?: StringFieldUpdateOperationsInput | string
     duration?: StringFieldUpdateOperationsInput | string
     tipe?: StringFieldUpdateOperationsInput | string
     synopsis?: NullableStringFieldUpdateOperationsInput | string | null

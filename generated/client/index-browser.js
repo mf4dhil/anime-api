@@ -92,6 +92,7 @@ function makeEnum(x) { return x; }
 exports.Prisma.FilmScalarFieldEnum = makeEnum({
   id: 'id',
   title: 'title',
+  img: 'img',
   duration: 'duration',
   tipe: 'tipe',
   synopsis: 'synopsis',
