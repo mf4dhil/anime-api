@@ -12,41 +12,47 @@ const prisma = new PrismaClient({
   },
 });
 
-const studioData: Prisma.StudioCreateInput[] = [
-  {
-    name: 'Mappa',
-  },
-  {
-    name: 'Toei Animation',
-  },
-  {
-    name: 'Studio Pierrot',
-  }
-]
-
-// const genreData: Prisma.GenreCreateInput[] = [
+// const studioData: Prisma.StudioCreateInput[] = [
 //   {
-//     name: 'Romance'
+//     name: 'Mappa',
 //   },
 //   {
-//     name: 'Action'
+//     name: 'Toei Animation',
 //   },
 //   {
-//     name: 'Comedy'
-//   },
-//   {
-//     name: 'Slince Of Life'
-//   },
-//   {
-//     name: 'Drama'
+//     name: 'Studio Pierrot',
 //   }
 // ]
 
-for (const u of studioData) {
-  const studio = await prisma.studio.create({
+const genreData: Prisma.GenreCreateInput[] = [
+  {
+    name: 'Romance'
+  },
+  {
+    name: 'Action'
+  },
+  {
+    name: 'Comedy'
+  },
+  {
+    name: 'Slince Of Life'
+  },
+  {
+    name: 'Drama'
+  },
+  {
+    name: 'Slince of Life'
+  },
+  {
+    name: 'Trhiller'
+  },
+]
+
+for (const u of genreData) {
+  const genre = await prisma.genre.create({
     data: u,
   });
-  console.log(`Created studio with id: ${studio.id}`);
+  console.log(`Created genre with id: ${genre.id}`);
 }
 console.log(`Seeding finished`);
 await prisma.$disconnect();

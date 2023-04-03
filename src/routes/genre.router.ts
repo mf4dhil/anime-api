@@ -74,15 +74,15 @@ route
   .delete('/genre/:id', async (ctx) => {
     try {
       const id: string = ctx.params.id
-      const data = await prisma.genre.delete({
+      await prisma.genre.delete({
         where: {
           id: Number(id)
         }
       })
-      fresponse(200, data, "Genre Deleted Successfully!", ctx.response)
+      fresponse(200, 'deleted', "Genre Deleted Successfully!", ctx.response)
     } catch (error) {
       fresponse(500, '', error.message, ctx.response)
     }
-  })
+  });
 
 export default route
