@@ -1,15 +1,15 @@
-### getAllGEnre
-GET http://127.0.0.1:3000/genre
+### getFilmByParams
+GET http://127.0.0.1:3000/film?page=3&pageSize=2
 
-### getOneGEnre
-GET http://127.0.0.1:3000/genre/6
+### getGEnre
+GET http://127.0.0.1:3000/genre
 
 ### createGenre
 POST http://127.0.0.1:3000/genre
 Content-Type: application/json
 
 {
-  "name": "Thriller"
+  "name": "Isekai"
 }
 ### updateGenre
 PATCH  http://127.0.0.1:3000/genre/6
@@ -17,4 +17,20 @@ Content-Type: application/json
 
 {
   "name": "Isekai"
+}
+
+### create anime
+POST http://127.0.0.1:3000/film
+Content-Type: application/json
+
+{
+  "title": "One Piece",
+  "img": "https://www.arthipo.com/image/cache/catalog/poster/anime/700-1341/anime879-One-Piece-manga-poster-print-sales-high-resolution-image-download-763x1100.jpg",
+  "duration": "23 menit",
+  "tipe": "Tv",
+  "synopsis": "petualangan seorang anak bernama Monkey D. Luffy yang bercita-cita menjadi raja bajak laut dan menemukan One Piece setelah terinspirasi oleh Shanks. Sekitar 22 tahun sebelum cerita dimulai, seorang bajak laut bernama Gol D. Roger, atau lebih dikenal sebagai raja bajak laut dieksekusi mati di depan publik. Tepat sebelum kematiannya, ia mengumumkan kepada orang banyak tentang harta miliknya, One Piece, yang diklaim sebagai harta terbesar yang pernah ada.Kematian Roger memicu dimulainya era Zaman Keemasan Bajak Laut, ditandai turunnya banyak bajak laut hingga tak terhitung jumlahnya mencari harta karun. Luffy termasuk salah satu yang berniat menemukan One Piece dan menjadi raja bajak laut berikutnya, turun ke laut untuk memulai petualangannya serta mulai mengumpulkan beberapa kru sebagai teman seperjalanan.",
+  "studioId": 1,
+  "genre": [
+    2,3,5
+  ]
 }
