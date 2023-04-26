@@ -12,7 +12,7 @@
 - Delete film data, genre, and studio
 
 ##### Get all data
-use the following list of routers to get all the data
+use the following list of endpoints to get all the data
  
 | Plugin | README |
 | ------ | ------ |
@@ -21,7 +21,7 @@ use the following list of routers to get all the data
 | All Studio Data | http://127.0.0.1:3000/studio |
 
 ##### Get specific data
-use the following list of routers to get spesific data
+use the following list of endpoints to get spesific data
  
 | Plugin | README |
 | ------ | ------ |
@@ -32,7 +32,7 @@ use the following list of routers to get spesific data
 contoh 👉  http://127.0.0.1:3000/film/:id
 
 ##### Displays some data anime for each page
-use the following list of routers to get spesific data
+use the following list of endpoints to get spesific data
  
 | Plugin | README |
 | ------ | ------ |
@@ -41,7 +41,7 @@ use the following list of routers to get spesific data
 contoh 👉  http://127.0.0.1:3000/film?page=4?perPage=12
 
 ##### Delete data
-use the following list of routers to get all the data
+use the following list of endpoints to get all the data
  
 | Plugin | README |
 | ------ | ------ |
@@ -49,10 +49,10 @@ use the following list of routers to get all the data
 | All Genre Data | http://127.0.0.1:3000/genre/:id |
 | All Studio Data | http://127.0.0.1:3000/studio/:id |
 
-delete method is required to use this router😊
+delete method is required to use this endpoints😊
 
 ##### Update data
-use the following list of routers to get all the data
+use the following list of endpoints to get all the data
  
 | Plugin | README |
 | ------ | ------ |
@@ -63,7 +63,7 @@ use the following list of routers to get all the data
 patch method is required to use this router😊
 
 ##### Create data
-use the following list of routers to get all the data
+use the following list of endpoints to get all the data
  
 | Plugin | README |
 | ------ | ------ |
@@ -71,7 +71,7 @@ use the following list of routers to get all the data
 | All Genre Data | http://127.0.0.1:3000/genre |
 | All Studio Data | http://127.0.0.1:3000/studio |
 
-post method is required to use this router😊
+post method is required to use this endpoint😊
 
 
 ## Tech
