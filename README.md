@@ -36,9 +36,9 @@ use the following list of endpoints to get spesific data
  
 | Plugin | README |
 | ------ | ------ |
-| display data/page | http://127.0.0.1:3000/film?page={jumlahPage}?pageSize={jumlahAnime} |
+| display data/page | http://127.0.0.1:3000/film?page={jumlahPage}&pageSize={jumlahAnime} |
 
-contoh 👉  http://127.0.0.1:3000/film?page=4?perPage=12
+contoh 👉  http://127.0.0.1:3000/film?page=4&perPage=12
 
 ##### Delete data
 use the following list of endpoints to get all the data
