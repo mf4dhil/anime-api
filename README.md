@@ -49,8 +49,6 @@ use the following list of endpoints to get all the data
 | All Genre Data | http://127.0.0.1:3000/genre/:id |
 | All Studio Data | http://127.0.0.1:3000/studio/:id |
 
-delete method is required to use this endpoints😊
-
 ##### Update data
 use the following list of endpoints to get all the data
  
@@ -60,8 +58,6 @@ use the following list of endpoints to get all the data
 | All Genre Data | http://127.0.0.1:3000/genre/:id |
 | All Studio Data | http://127.0.0.1:3000/studio/:id |
 
-patch method is required to use this router😊
-
 ##### Create data
 use the following list of endpoints to get all the data
  
@@ -70,9 +66,6 @@ use the following list of endpoints to get all the data
 | All Anime Data | http://127.0.0.1:3000/film |
 | All Genre Data | http://127.0.0.1:3000/genre |
 | All Studio Data | http://127.0.0.1:3000/studio |
-
-post method is required to use this endpoint😊
-
 
 ## Tech
 
