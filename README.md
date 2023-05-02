@@ -67,6 +67,18 @@ use the following list of endpoints to get all the data
 | All Genre Data | http://127.0.0.1:3000/genre |
 | All Studio Data | http://127.0.0.1:3000/studio |
 
+```json
+// create anime data
+{
+ "title": "Kimetsu",
+ "img": "<img url>",
+ "duration": "23 menit",
+ "tipe" : "TV",
+ "synopsis": "lorem ipsum dolor", 
+}
+```
+
+
 ## Tech
 
 ##### DENOJS🦕
